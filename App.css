@@ -1,0 +1,100 @@
+body{
+  font-family: 'arial', sans-serif;
+  background-color: #bbbbbb;
+  margin:0;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  min-height: 100vh;
+}
+.app-container{
+  background-color: #ffffff;
+  padding:20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+h1{
+  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 2em;
+  color:#3b3737
+}
+.input-container{
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+.input-container input[type="text"]{
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+.input-container input[type="text"]:focus{
+  border-color: #007BFF;
+  outline: none;
+}
+.add-btn{
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  background-color: #297fb7;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.add-btn:hover{
+  background-color: #28394c;
+}
+.todo-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+.todo-list li{
+  padding: 10px 15px;
+  border: 1px solid #515357;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  word-break: break-word;
+}
+.todo-list li:hover{
+ background-color: #e1e3e7; 
+}
+.todo-list span{
+  flex-grow: 1;
+  margin-right: 10px;
+}
+.todo-list button{
+  padding: 5px 10px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 4px;
+  background-color: #d9534f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.todo-list li.completed span{
+  text-decoration: line-through;
+  color: gray;
+}
+.todo-list:empty::after{
+  content: "No tasks added yet!";
+  color: #777;
+  display: block;
+  font-style: italic;
+  text-align: center;
+}
